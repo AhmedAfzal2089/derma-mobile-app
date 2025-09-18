@@ -1,7 +1,7 @@
 // app/_layout.tsx
 import CustomHeader from "@/components/CustomHeader";
 import { Stack } from "expo-router";
-import { StatusBar, View } from "react-native";
+import { View } from "react-native";
 import "./global.css";
 
 // This is your reusable header component

@@ -2,6 +2,7 @@ import ConsultationCard from "@/components/Home/ConsulationCard";
 import ConsultationSteps from "@/components/Home/ConsultationSteps";
 import ExpertCard from "@/components/Home/ExpertCard";
 import HeroSection from "@/components/Home/HeroSection";
+import ReferralSection from "@/components/Home/RefferalSection";
 import TreatmentsGrid from "@/components/Home/TreatmentsGrid";
 import { ScrollView } from "react-native";
 
@@ -13,6 +14,7 @@ export default function Index() {
       <ExpertCard />
       <TreatmentsGrid />
       <ConsultationSteps />
+      <ReferralSection />
       {/* Add more components below here */}
     </ScrollView>
   );
