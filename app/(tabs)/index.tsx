@@ -1,4 +1,5 @@
 import ConsultationCard from "@/components/Home/ConsulationCard";
+import ConsultationSteps from "@/components/Home/ConsultationSteps";
 import ExpertCard from "@/components/Home/ExpertCard";
 import HeroSection from "@/components/Home/HeroSection";
 import TreatmentsGrid from "@/components/Home/TreatmentsGrid";
@@ -11,6 +12,7 @@ export default function Index() {
       <ConsultationCard />
       <ExpertCard />
       <TreatmentsGrid />
+      <ConsultationSteps />
       {/* Add more components below here */}
     </ScrollView>
   );

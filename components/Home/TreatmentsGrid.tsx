@@ -65,8 +65,8 @@ export default function TreatmentsGrid() {
       {/* View All Treatments Button */}
       <View className="items-center mt-6">
         <Link href="/pages/treatments/treatements" asChild>
-          <TouchableOpacity className="px-6 py-2 border border-white rounded-full">
-            <Text className="text-white">View All Treatments</Text>
+          <TouchableOpacity className="px-6 py-4 border border-zinc-500 rounded-full bg-zinc-900">
+            <Text className="text-white ">View All Treatments</Text>
           </TouchableOpacity>
         </Link>
       </View>
