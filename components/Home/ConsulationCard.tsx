@@ -25,7 +25,7 @@ export default function ConsultationCard() {
           </Link>
 
           {/* Features Section */}
-          <View className="flex-row items-center justify-center space-x-8">
+          <View className="flex-col gap-3 items-center justify-center space-x-8">
             <View className="flex-row items-center">
               <Feather name="shield" size={16} color="white" />
               <Text className="text-white ml-2">No hidden fees</Text>
