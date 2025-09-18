@@ -3,7 +3,7 @@ import { Text, TouchableOpacity, View } from "react-native";
 
 const HeroSection = () => {
   return (
-    <View className="flex-1 justify-center items-center bg-gray-800 py-28">
+    <View className="flex-1 justify-center items-center bg-zinc-900 py-28">
       {/* Content Container */}
       <View className="items-center p-4 gap-10">
         <Text className="text-5xl font-bold text-center text-white mb-2">

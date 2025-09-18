@@ -5,7 +5,7 @@ import { Text, TouchableOpacity, View } from "react-native";
 
 export default function ConsultationCard() {
   return (
-    <View className="my-14">
+    <View className="my-16">
       <View className="bg-zinc-900 mx-4 p-8  rounded-2xl shadow-lg">
         <View className="items-center">
           <Text className="text-2xl font-bold text-white mb-2">
