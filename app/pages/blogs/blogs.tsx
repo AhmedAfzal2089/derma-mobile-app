@@ -1,12 +1,12 @@
 import React from "react";
 import { Text, View } from "react-native";
 
-const Membership = () => {
+const Blogs = () => {
   return (
     <View className="flex-1 items-center justify-center">
-      <Text> this is membership</Text>
+      <Text> this is Blogs</Text>
     </View>
   );
 };
 
-export default Membership;
+export default Blogs;

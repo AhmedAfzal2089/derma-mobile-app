@@ -3,17 +3,17 @@ import { Image, Text, TouchableOpacity, View } from "react-native";
 
 export default function MembershipCard() {
   return (
-    <View className="bg-zinc-900 mx-4 p-6 py-12 gap-6 rounded-2xl shadow-lg my-10 flex-col items-center justify-between">
+    <View className="bg-zinc-900 mx-4 p-6 py-12 gap-6 rounded-2xl shadow-lg my-10 flex-col items-center justify-between h-[5%]">
       {/* Left Content */}
       <View className="flex-row items-center flex-1">
         {/* Logo and Membership Text */}
-        <View className="flex-row items-center">
+        <View className="flex-row items-center gap-2">
           <Image
             source={require("../../assets/logos/logo_white.png")}
             className="w-16 h-8"
             resizeMode="contain"
           />
-          <View className="ml-2">
+          <View >
             <Text className="text-white text-lg font-bold">DV Club</Text>
             <Text className="text-white text-base">Membership</Text>
           </View>
