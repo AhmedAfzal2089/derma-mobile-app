@@ -5,7 +5,7 @@ import { Text, TouchableOpacity, View } from "react-native";
 
 export default function Footer() {
   return (
-    <View className="bg-zinc-950 p-6">
+    <View className="bg-zinc-800 p-6">
       {/* Derma Veritas Section */}
       <View className="mb-8">
         <Text className="text-xl font-bold text-white mb-4">Derma Veritas</Text>
@@ -26,7 +26,7 @@ export default function Footer() {
       {/* Quick Links Section */}
       <View className="mb-8">
         <Text className="text-xl font-bold text-white mb-4">Quick Links</Text>
-        <Link href="/pages/about/about" asChild>
+        <Link href="/about" asChild>
           <TouchableOpacity className="mb-2">
             <Text className="text-gray-300">About Us</Text>
           </TouchableOpacity>

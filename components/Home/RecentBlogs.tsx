@@ -4,7 +4,7 @@ import { Text, TouchableOpacity, View } from "react-native";
 
 export default function RecentBlogs() {
   return (
-    <View className="bg-zinc-950 mx-4 p-6 my-6 items-center rounded-xl">
+    <View className="bg-zinc-950 mx-4 p-6 my-6 py-14 items-center rounded-xl">
       {/* Title */}
       <Text className="text-2xl font-bold text-center text-white mb-2">
         Recent Blogs
@@ -18,8 +18,10 @@ export default function RecentBlogs() {
 
       {/* "VIEW ALL BLOGS" Button */}
       <Link href="/pages/blogs/blogs" asChild>
-        <TouchableOpacity className="px-8 py-3 bg-zinc-950 rounded-md border border-white">
-          <Text className="text-white font-semibold">VIEW ALL BLOGS</Text>
+        <TouchableOpacity className="px-6 py-4 bg-white rounded-md shadow-lg">
+          <Text className="text-zinc-900 font-semibold text-base">
+            VIEW ALL BLOGS
+          </Text>
         </TouchableOpacity>
       </Link>
     </View>

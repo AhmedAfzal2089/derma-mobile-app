@@ -42,10 +42,10 @@ export default function ReferralSection() {
           </View>
 
           {/* "Start Referring" Button */}
-          <TouchableOpacity className="px-6 py-4 border border-gray-500 rounded-full bg-transparent">
+          <TouchableOpacity className="px-6 py-4 bg-white rounded-md shadow-lg">
             <Link
               href={"/(tabs)/refferal"}
-              className="text-white font-semibold"
+              className="text-zinc-900 font-semibold text-base"
             >
               START REFERRING
             </Link>

@@ -13,7 +13,7 @@ export default function MembershipCard() {
             className="w-16 h-8"
             resizeMode="contain"
           />
-          <View >
+          <View>
             <Text className="text-white text-lg font-bold">DV Club</Text>
             <Text className="text-white text-base">Membership</Text>
           </View>
@@ -33,8 +33,10 @@ export default function MembershipCard() {
 
       {/* "Learn More" Button */}
       <Link href="/pages/membership/membership" asChild>
-        <TouchableOpacity className="px-6 py-3 border border-white rounded-md">
-          <Text className="text-white text-base font-semibold">LEARN MORE</Text>
+        <TouchableOpacity className="px-6 py-4 bg-white rounded-md shadow-lg">
+          <Text className="text-zinc-900 font-semibold text-base">
+            LEARN MORE
+          </Text>
         </TouchableOpacity>
       </Link>
     </View>
