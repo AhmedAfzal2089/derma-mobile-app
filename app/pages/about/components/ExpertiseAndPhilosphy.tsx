@@ -4,10 +4,10 @@ import { Text, View } from "react-native";
 
 export default function ExpertiseAndPhilosophy() {
   return (
-    <View className="flex-col items-center p-6 my-10 gap-10 bg-white">
+    <View className="flex-col items-center p-6 gap-10 bg-white">
       {/* Our Expertise Section */}
-      <View className="items-center px-4 py-16 bg-zinc-950 rounded-xl">
-        <Text className="text-sm font-semibold text-gray-400 mb-2">
+      <View className="items-center px-4 py-10 bg-zinc-950 rounded-xl">
+        <Text className="text-sm font-semibold text-gray-400 mb-8">
           OUR EXPERTISE
         </Text>
         <Text className="text-3xl font-bold text-white mb-4">
@@ -25,7 +25,7 @@ export default function ExpertiseAndPhilosophy() {
       </View>
 
       {/* Our Philosophy Section */}
-      <View className="bg-zinc-900 p-6 rounded-2xl">
+      <View className="bg-zinc-950 p-6 rounded-2xl">
         <View className="flex-row items-center mb-4">
           <View className="bg-white w-8 h-8 rounded-full items-center justify-center mr-3">
             <Text className="text-black font-bold">DV</Text>
