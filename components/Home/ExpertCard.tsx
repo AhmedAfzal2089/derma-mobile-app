@@ -37,7 +37,7 @@ export default function ExpertCard() {
           </Text>
 
           {/* "Read About Us" Button */}
-          <Link href="/pages/about/about" asChild>
+          <Link href="/about" asChild>
             <TouchableOpacity className="px-6 py-3 border border-gray-500 rounded-md">
               <Text className="text-white font-semibold">READ ABOUT US</Text>
             </TouchableOpacity>
