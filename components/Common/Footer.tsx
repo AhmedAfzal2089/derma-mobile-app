@@ -41,7 +41,7 @@ export default function Footer() {
             <Text className="text-gray-300">Pricing Plans</Text>
           </TouchableOpacity>
         </Link>
-        <Link href="/pages/membership/membership" asChild>
+        <Link href="/membership" asChild>
           <TouchableOpacity className="mb-2">
             <Text className="text-gray-300">Membership</Text>
           </TouchableOpacity>
