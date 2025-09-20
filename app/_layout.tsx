@@ -43,6 +43,12 @@ export default function RootLayout() {
             header: () => <CustomHeader />,
           }}
         />
+        <Stack.Screen
+          name="team" // <-- Add this line for the about page
+          options={{
+            header: () => <CustomHeader />,
+          }}
+        />
         {/* Add any other standalone pages here */}
       </Stack>
     </View>
