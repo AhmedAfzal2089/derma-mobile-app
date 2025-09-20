@@ -32,7 +32,7 @@ export default function MembershipCard() {
       </View>
 
       {/* "Learn More" Button */}
-      <Link href="/pages/membership/membership" asChild>
+      <Link href="/membership" asChild>
         <TouchableOpacity className="px-6 py-4 bg-white rounded-md shadow-lg">
           <Text className="text-zinc-900 font-semibold text-base">
             LEARN MORE

@@ -8,7 +8,7 @@ import "./global.css";
 
 export default function RootLayout() {
   const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
