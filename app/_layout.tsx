@@ -1,4 +1,3 @@
-// app/_layout.tsx
 import CustomHeader from "@/components/CustomHeader";
 import { Stack, useRouter } from "expo-router";
 import { onAuthStateChanged, User } from "firebase/auth";
@@ -17,9 +16,10 @@ export default function RootLayout() {
       setUser(firebaseUser);
       setLoading(false);
 
-      // Redirect unauthenticated users to login
       if (!firebaseUser) {
-        router.replace("/(auth)/login"); 
+        router.replace("/(auth)/login");
+      } else {
+        router.replace("/(tabs)");
       }
     });
 
