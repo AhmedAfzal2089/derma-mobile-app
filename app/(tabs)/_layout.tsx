@@ -6,7 +6,7 @@ import { useColorScheme } from "react-native";
 const _layout = () => {
   const colorScheme = useColorScheme();
 
-  const isDark = colorScheme === "dark";
+  const isDark = true;
 
   return (
     <Tabs
@@ -20,8 +20,9 @@ const _layout = () => {
           right: 20,
           height: 70,
           backgroundColor: isDark ? "#18181b" : "#ffffff", // Tailwind's zinc-900 / white
-          borderRadius: 12,
-          paddingBottom: 10,
+          // borderRadius: 12,
+          paddingBottom: 70,
+          // marginBottom : 36,
           paddingTop: 10,
           borderTopWidth: 0,
           shadowColor: "#000",
@@ -61,13 +62,14 @@ const _layout = () => {
           ),
         }}
       />
+      {/* From where this size is coming? */}
       <Tabs.Screen
         name="bookings"
         options={{
           title: "Bookings",
           headerShown: false,
           tabBarIcon: ({ color, size }) => (
-            <FontAwesome name="calendar" size={size} color={color} />
+            <FontAwesome name="calendar" size={21} color={color} />
           ),
         }}
       />
