@@ -36,7 +36,7 @@ export default function Footer() {
             <Text className="text-gray-300">Our Services</Text>
           </TouchableOpacity>
         </Link>
-        <Link href="/(blogs)/blogs" asChild>
+        <Link href="/gallery" asChild>
           <TouchableOpacity className="mb-2">
             <Text className="text-gray-300">Pricing Plans</Text>
           </TouchableOpacity>

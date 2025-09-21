@@ -10,7 +10,7 @@ export default function ExpertCard() {
         {/* Profile Image and Name/Title */}
         <View className="items-center mb-6">
           <Image
-            source={require("../../public/owner.png")} // Add your image path here
+            source={require("../../public/Doctor_Image.png")} // Add your image path here
             className="w-40 h-40 rounded-full mb-4"
             resizeMode="contain"
           />
