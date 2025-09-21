@@ -4,7 +4,7 @@ import { Text, TouchableOpacity, View } from "react-native";
 
 const ReferralCards = () => {
   return (
-    <View className="flex-1 bg-zinc-950 p-5 py-10 rounded-xl m-5">
+    <View className="flex-1 bg-zinc-950 p-5 py-10 rounded-xl m-3">
       <Text className="text-2xl font-bold text-zinc-200 text-center mb-2.5">Choose Your Program</Text>
       <Text className="text-base text-zinc-400 text-center mb-5">
         Select the referral program that matches your profile and start earning rewards today.

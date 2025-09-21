@@ -11,7 +11,7 @@ const ReferralHero = () => {
       </View>
 
       {/* Title */}
-      <Text className="text-3xl md:text-4xl text-center font-semibold text-gray-900">Referral{"\n"}Programs</Text>
+      <Text className="text-4xl text-center font-bold text-gray-900">Referral{"\n"}Programs</Text>
 
       {/* Subtitle */}
       <Text className="text-center text-base text-gray-600 mt-4 leading-relaxed max-w-xl">
