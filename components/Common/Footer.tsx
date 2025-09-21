@@ -31,7 +31,7 @@ export default function Footer() {
             <Text className="text-gray-300">About Us</Text>
           </TouchableOpacity>
         </Link>
-        <Link href="/(tabs)/profile" asChild>
+        <Link href="/referfriend" asChild>
           <TouchableOpacity className="mb-2">
             <Text className="text-gray-300">Our Services</Text>
           </TouchableOpacity>

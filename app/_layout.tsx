@@ -44,6 +44,7 @@ export default function RootLayout() {
         <Stack.Screen name="membership" options={{ header: () => <CustomHeader /> }} />
         <Stack.Screen name="contact" options={{ header: () => <CustomHeader /> }} />
         <Stack.Screen name="team" options={{ header: () => <CustomHeader /> }} />
+        <Stack.Screen name="referfriend" options={{ header: () => <CustomHeader /> }} />
         <Stack.Screen name="(auth)" options={{ headerShown: false }} />
       </Stack>
     </View>
