@@ -38,6 +38,7 @@ export default function RootLayout() {
     <View className="flex-1">
       <Stack>
         <Stack.Screen name="(tabs)" options={{ header: () => <CustomHeader /> }} />
+        <Stack.Screen name="(blogs)" options={{ header: () => <CustomHeader /> }} />
         <Stack.Screen name="cart" options={{ header: () => <CustomHeader /> }} />
         <Stack.Screen name="about" options={{ header: () => <CustomHeader /> }} />
         <Stack.Screen name="membership" options={{ header: () => <CustomHeader /> }} />

@@ -31,12 +31,12 @@ export default function Footer() {
             <Text className="text-gray-300">About Us</Text>
           </TouchableOpacity>
         </Link>
-        <Link href="/membership" asChild>
+        <Link href="/(tabs)/profile" asChild>
           <TouchableOpacity className="mb-2">
             <Text className="text-gray-300">Our Services</Text>
           </TouchableOpacity>
         </Link>
-        <Link href="/pages/treatments/treatements" asChild>
+        <Link href="/(blogs)/blogs" asChild>
           <TouchableOpacity className="mb-2">
             <Text className="text-gray-300">Pricing Plans</Text>
           </TouchableOpacity>
