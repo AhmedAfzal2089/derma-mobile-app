@@ -1,6 +1,7 @@
 import { User as FirebaseUser, onAuthStateChanged } from "firebase/auth";
 import React, { createContext, ReactNode, useContext, useEffect, useState } from "react";
 import { auth } from "../config/firebase";
+import { ENVIRONMENT } from "../constants/environment.constants";
 import { AuthContextType } from "../models/auth-context-type.model";
 import { UserProfile } from "../models/user-profile.model";
 
@@ -27,7 +28,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         if (currentUser) {
           try {
             // call your API with the Firebase uid
-            const res = await fetch(`https://derma-veritas.vercel.app/api/user/${currentUser.uid}`);
+            console.log("Request URL", `${ENVIRONMENT.API_BASE_URL}/user/${currentUser.uid}`);
+            const res = await fetch(`${ENVIRONMENT.API_BASE_URL}/user/${currentUser.uid}`);
 
             if (!res.ok) throw new Error("Failed to fetch profile");
 

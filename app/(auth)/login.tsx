@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { Alert, Pressable, Text, TextInput, View } from "react-native";
 
+import Spinner from "@/components/Common/Spinner";
 import { Ionicons } from "@expo/vector-icons";
 import { router } from "expo-router";
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -89,10 +90,10 @@ export default function Login() {
 
       <Pressable
         onPress={handleLogin}
-        className={`w-full py-3 rounded-lg items-center ${!isFormValid || loading ? "bg-zinc-600" : "bg-zinc-900"}`}
-        disabled={!isFormValid || loading}
+        className={`w-full py-3 rounded-lg items-center bg-zinc-900`}
+        disabled={loading}
       >
-        <Text className="text-white font-semibold text-base">{loading ? "Logging in..." : "Login"}</Text>
+        <Text className="text-white font-semibold text-base">{loading ? <Spinner size="small" color="#fff" /> : "Login"}</Text>
       </Pressable>
     </View>
   );

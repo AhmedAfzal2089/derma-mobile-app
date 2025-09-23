@@ -1,4 +1,5 @@
 import { auth } from "@/app/config/firebase";
+import { ENVIRONMENT } from "@/app/constants/environment.constants";
 import { UserProfile } from "@/app/models/user-profile.model";
 import { formatDate } from "@/app/utils/formatDate";
 import { parseDateOrNull } from "@/app/utils/parseDateOrNull";
@@ -42,7 +43,8 @@ const ProfileForm: React.FC<Props> = ({ profile }) => {
       const token = await auth.currentUser?.getIdToken();
       console.log("Token", token);
       console.log("Form Data", formData);
-      const res = await fetch(`https://derma-veritas.vercel.app/api/user/profile/${profile?.id}`, {
+      console.log("Request url", `${ENVIRONMENT.API_BASE_URL}/user/profile/${profile?.id}`);
+      const res = await fetch(`${ENVIRONMENT.API_BASE_URL}/user/profile/${profile?.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

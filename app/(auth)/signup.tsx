@@ -1,3 +1,4 @@
+import Spinner from "@/components/Common/Spinner";
 import { Ionicons } from "@expo/vector-icons";
 import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 import { useState } from "react";
@@ -5,6 +6,7 @@ import { Pressable, Text, TextInput, View } from "react-native";
 import Toast from "react-native-toast-message";
 import { auth } from "../config/firebase";
 import { SignupPayload } from "../models/signup-payload.model";
+import { ENVIRONMENT } from "../constants/environment.constants";
 
 export default function Signup() {
   const [fullName, setFullName] = useState("");
@@ -50,8 +52,7 @@ export default function Signup() {
     if (!value) return "Password is required";
     if (value.length < 8) return "Password must be at least 8 characters";
     const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).+$/;
-    if (!regex.test(value))
-      return "Password must include upper, lower, number, and special character";
+    if (!regex.test(value)) return "Password must include upper, lower, number, and special character";
     return "";
   };
 
@@ -101,7 +102,7 @@ export default function Signup() {
       payload.phone = phoneNumber;
       payload.password = password;
 
-      const response = await fetch("https://dermaveritas.com/api/signup", {
+      const response = await fetch(`${ENVIRONMENT.API_BASE_URL}/signup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -161,9 +162,7 @@ export default function Signup() {
         placeholder="Email Address"
         keyboardType="email-address"
         autoCapitalize="none"
-        className={`w-full border rounded-lg px-4 py-3 mb-1 text-base text-zinc-900 ${
-          errors.email ? "border-red-500" : "border-zinc-300"
-        }`}
+        className={`w-full border rounded-lg px-4 py-3 mb-1 text-base text-zinc-900 ${errors.email ? "border-red-500" : "border-zinc-300"}`}
         value={email}
         onChangeText={setEmail}
         onBlur={() => handleBlur("email", email)}
@@ -222,21 +221,16 @@ export default function Signup() {
           <Ionicons name={showConfirmPassword ? "eye-off" : "eye"} size={22} color="gray" />
         </Pressable>
       </View>
-      {errors.confirmPassword ? (
-        <Text className="text-red-500 mb-2 text-sm self-start">*{errors.confirmPassword}</Text>
-      ) : null}
+      {errors.confirmPassword ? <Text className="text-red-500 mb-2 text-sm self-start">*{errors.confirmPassword}</Text> : null}
 
       {/* Create Account Button */}
+
       <Pressable
         onPress={handleSignup}
-        className={`w-full py-3 rounded-lg items-center mt-2 ${
-          loading || !isFormValid ? "bg-zinc-600" : "bg-zinc-900"
-        }`}
+        className={`w-full py-3 rounded-lg items-center mt-2 ${loading || !isFormValid ? "bg-zinc-700" : "bg-zinc-900"}`}
         disabled={loading || !isFormValid}
       >
-        <Text className="text-white font-semibold text-base">
-          {loading ? "Signing in..." : "Create Account"}
-        </Text>
+        <Text className="text-white font-semibold text-base">{loading ? <Spinner size="small" color="#fff" /> : "Create Account"}</Text>
       </Pressable>
     </View>
   );

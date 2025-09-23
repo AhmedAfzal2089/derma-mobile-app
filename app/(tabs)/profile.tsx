@@ -27,7 +27,7 @@ const Profile = () => {
     <ScrollView className="flex-1 pb-20">
       <View className="flex items-center justify-center">
         <Text className="text-2xl font-bold mt-3 mb-1">Profile Settings</Text>
-        <ScrollView className="flex-1 w-full px-1 pb-28">
+        <ScrollView className="flex-1 w-full px-3 pb-28">
           <ProfileForm profile={profile} />
           <AccountStatus profile={profile} />
           <View className="w-full py-3 rounded-xl mt-2 flex flex-row justify-center items-center bg-black gap-2">
