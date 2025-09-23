@@ -1,12 +1,20 @@
 export interface UserProfile {
-  uid: string;
+  id: string;
+  Buyinghistory: any[];
+  emailVerified: boolean;
+  referralCode: string;
+  plan: string | null;
+  role: string;
+  name: string;
+  address: string;
+  usedReferralCodes: string[];
+  phone: string;
+  isBanned: boolean;
+  referralRewards: number;
   email: string;
-  displayName?: string;
-  phoneNumber?: string;
-  photoURL?: string;
-  address?: string;
-  role?: string;
-  preferences?: Record<string, any>;
-  createdAt?: number;
-  [key: string]: any;
+  dateOfBirth: Date;
+  createdAt: string;
+  referrerInfo: any;
+  referralDetails: any[];
+  referralCount: number;
 }
