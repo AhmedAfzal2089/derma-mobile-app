@@ -1,0 +1,41 @@
+export const treatments = [
+  { value: "header-non-surgical", label: "✨ Non-surgical Enhancement", disabled: true },
+  { value: "endolift", label: "Endolift" },
+  { value: "8-point-facelift", label: "Eight point facelift" },
+  { value: "ablative", label: "CO2 Ablative resurfacing" },
+  { value: "non-surgical-rhinoplasty", label: "Non-surgical rhinoplasty" },
+
+  { value: "header-skin-perfecting", label: "🌿 Skin Perfecting", disabled: true },
+  { value: "co2-laser", label: "Fractional co2 resurfacing" },
+  { value: "skinpen-microneedling", label: "Radio frequency Microneedling" },
+  { value: "profusion-hydrafacial", label: "Pro Fusion" },
+  { value: "exo", label: "EXO NAD" },
+  { value: "prescription-skincare", label: "Prescription treatment" },
+
+  { value: "header-age-defying", label: "⏳ Age Defying", disabled: true },
+  { value: "v-hacker", label: "V hacker" },
+  { value: "iv-drips", label: "Bio Hacking Formula" },
+  { value: "exosomes", label: "Exosomes" },
+  { value: "anti-wrinkle-treatment", label: "Anti-wrinkle" },
+  { value: "prp", label: "PRP" },
+  { value: "polynucleotides-skin-rejuvenation-treatment", label: "Polynucleotide" },
+
+  { value: "header-facial-contorting", label: "💎 Facial Contorting", disabled: true },
+  { value: "dermal-fillers", label: "Jaw Fillers" },
+  { value: "chin-fillers", label: "Chin Fillers" },
+  { value: "lip-fillers", label: "Lip Fillers" },
+  { value: "cheek-fillers", label: "Cheek Fillers" },
+  { value: "tear-trough-filler", label: "Tear Trough Fillers" },
+  { value: "profhilo", label: "Profhilo" },
+  { value: "skinfill-bacio", label: "Skin Fill Bacio" },
+
+  { value: "header-hair", label: "💇 Hair Enhancements", disabled: true },
+  { value: "hair-prp", label: "Hair PRP" },
+  { value: "polynucleotides-hair-loss-treatment", label: "Hair polynucleotide" },
+  { value: "exosignal", label: "EXO SIGNAL" },
+  { value: "revitalizing", label: "Hair + revitalizing formula" },
+  { value: "prescription-hair", label: "Prescriptions treatments" },
+
+  { value: "header-others", label: "🧩 Others", disabled: true },
+  { value: "weight-loss", label: "Weight Loss modulators" },
+];

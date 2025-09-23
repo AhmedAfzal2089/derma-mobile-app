@@ -1,4 +1,3 @@
-import Footer from "@/components/Common/Footer";
 import AsFeaturedIn from "@/components/Home/AsFeaturedIn";
 import ConsultationCard from "@/components/Home/ConsulationCard";
 import ConsultationSteps from "@/components/Home/ConsultationSteps";
@@ -14,7 +13,7 @@ import { ScrollView } from "react-native";
 
 export default function Index() {
   return (
-    <ScrollView className="flex-1 mb-18">
+    <ScrollView className="flex-1 mb-28">
       <HeroSection />
       <ConsultationCard />
       <ExpertCard />
@@ -26,8 +25,7 @@ export default function Index() {
       <MembershipCard />
       <RecentBlogs />
       <AsFeaturedIn />
-      <Footer />
-      {/* Add more components below here */}
+      {/* <Footer /> */}
     </ScrollView>
   );
 }

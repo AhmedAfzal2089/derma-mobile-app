@@ -1,6 +1,5 @@
 // app/about.tsx
 import CoreValuesGrid from "@/components/Common/CoreValuesGrid";
-import Footer from "@/components/Common/Footer";
 import { ScrollView } from "react-native";
 import AboutHero from "./pages/about/components/AboutHero";
 import CallToAction from "./pages/about/components/CallToAction";
@@ -15,7 +14,7 @@ export default function AboutScreen() {
       <LeadershipBio />
       <CoreValuesGrid />
       <CallToAction />
-      <Footer />
+      {/* <Footer /> */}
     </ScrollView>
   );
 }

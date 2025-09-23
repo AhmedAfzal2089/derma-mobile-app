@@ -1,5 +1,4 @@
 // app/contact.tsx
-import Footer from "@/components/Common/Footer";
 import { Feather } from "@expo/vector-icons";
 import { Link } from "expo-router";
 import {
@@ -102,7 +101,7 @@ export default function ContactScreen() {
           </View>
         </View>
       </View>
-      <Footer />
+      {/* <Footer /> */}
     </ScrollView>
   );
 }
