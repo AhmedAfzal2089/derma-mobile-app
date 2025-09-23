@@ -31,12 +31,12 @@ export default function Footer() {
             <Text className="text-gray-300">About Us</Text>
           </TouchableOpacity>
         </Link>
-        <Link href="/pages/membership/membership" asChild>
+        <Link href="/referfriend" asChild>
           <TouchableOpacity className="mb-2">
             <Text className="text-gray-300">Our Services</Text>
           </TouchableOpacity>
         </Link>
-        <Link href="/pages/treatments/treatements" asChild>
+        <Link href="/gallery" asChild>
           <TouchableOpacity className="mb-2">
             <Text className="text-gray-300">Pricing Plans</Text>
           </TouchableOpacity>
@@ -60,15 +60,11 @@ export default function Footer() {
 
       {/* Business Hours & Location Section */}
       <View className="mb-8">
-        <Text className="text-xl font-bold text-white mb-4">
-          Business Hours
-        </Text>
+        <Text className="text-xl font-bold text-white mb-4">Business Hours</Text>
         <View className="flex-row items-center mb-2">
           <Feather name="clock" size={16} color="white" />
           <View className="ml-2">
-            <Text className="text-gray-300">
-              Monday - Friday: 11:00 - 19:00
-            </Text>
+            <Text className="text-gray-300">Monday - Friday: 11:00 - 19:00</Text>
             <Text className="text-gray-300">Saturday: 8:00 - 18:00</Text>
             <Text className="text-gray-300">Sunday: Closed</Text>
           </View>
@@ -87,9 +83,7 @@ export default function Footer() {
       {/* Follow Us Section */}
       <View className="mb-8">
         <Text className="text-xl font-bold text-white mb-4">Follow Us</Text>
-        <Text className="text-gray-300 mb-4">
-          Stay connected with us on social media
-        </Text>
+        <Text className="text-gray-300 mb-4">Stay connected with us on social media</Text>
         <View className="flex-row space-x-4 gap-4">
           <TouchableOpacity className="bg-blue-600 w-10 h-10 rounded-full items-center justify-center">
             <FontAwesome5 name="facebook-f" size={18} color="white" />
@@ -108,24 +102,16 @@ export default function Footer() {
 
       {/* Copyright Section */}
       <View className="border-t border-gray-700 pt-4 mt-4">
-        <Text className="text-gray-500 text-sm text-center">
-          © 2023 Derma Veritas. All rights reserved.
-        </Text>
+        <Text className="text-gray-500 text-sm text-center">© 2023 Derma Veritas. All rights reserved.</Text>
         <View className="flex-row justify-center mt-2">
           <Link href="/(tabs)" asChild>
-            <Text className="text-gray-500 text-sm mx-2 underline">
-              Privacy Policy
-            </Text>
+            <Text className="text-gray-500 text-sm mx-2 underline">Privacy Policy</Text>
           </Link>
           <Link href="/(tabs)" asChild>
-            <Text className="text-gray-500 text-sm mx-2 underline">
-              Terms of Service
-            </Text>
+            <Text className="text-gray-500 text-sm mx-2 underline">Terms of Service</Text>
           </Link>
           <Link href="/(tabs)" asChild>
-            <Text className="text-gray-500 text-sm mx-2 underline">
-              Cookie Policy
-            </Text>
+            <Text className="text-gray-500 text-sm mx-2 underline">Cookie Policy</Text>
           </Link>
         </View>
       </View>

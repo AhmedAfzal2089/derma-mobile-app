@@ -1,4 +1,3 @@
-import Footer from "@/components/Common/Footer";
 import React from "react";
 import { ScrollView } from "react-native";
 import ExperienceExcellenceSection from "./pages/membership/components/ExperienceExcellence";
@@ -15,7 +14,7 @@ const Membership = () => {
       <MembershipTiers />
       <MembershipTerms />
       <ExperienceExcellenceSection />
-      <Footer />
+      {/* <Footer /> */}
     </ScrollView>
   );
 };
