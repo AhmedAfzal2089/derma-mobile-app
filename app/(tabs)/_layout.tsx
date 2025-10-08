@@ -1,44 +1,32 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import { FontAwesome } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
-import { useColorScheme } from "react-native";
 
 const _layout = () => {
-  const colorScheme = useColorScheme();
-
-  const isDark = true;
-
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: isDark ? "#ffffff" : "#111111",
-        tabBarInactiveTintColor: isDark ? "#7f7f7f" : "#a1a1aa", // Tailwind's gray-500/400
+        headerShown: false,
+        tabBarShowLabel: true,
+        tabBarActiveTintColor: "#000000",
+        tabBarInactiveTintColor: "#9ca3af", // gray-400
+
         tabBarStyle: {
-          position: "absolute",
-          bottom: 0,
-          left: 20,
-          right: 20,
           height: 70,
-          backgroundColor: isDark ? "#18181b" : "#ffffff", // Tailwind's zinc-900 / white
-          // borderRadius: 12,
-          paddingBottom: 70,
-          // marginBottom : 36,
-          paddingTop: 10,
+          backgroundColor: "#ffffff",
           borderTopWidth: 0,
           shadowColor: "#000",
-          shadowOpacity: 0.12,
-          shadowOffset: { width: 0, height: 6 },
-          shadowRadius: 12,
-          elevation: 10, // For Android
-        },
-        tabBarItemStyle: {
-          justifyContent: "center",
-          alignItems: "center",
-          gap: 4,
+          shadowOpacity: 0.08,
+          shadowOffset: { width: 0, height: -2 },
+          shadowRadius: 8,
+          elevation: 8,
         },
         tabBarLabelStyle: {
-          fontSize: 12,
+          fontSize: 11,
           fontWeight: "600",
+          marginBottom: 8,
+        },
+        tabBarIconStyle: {
+          marginTop: 8,
         },
       }}
     >
@@ -46,41 +34,35 @@ const _layout = () => {
         name="index"
         options={{
           title: "Home",
-          headerShown: false,
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome name="home" size={size} color={color} />
-          ),
+          tabBarIcon: ({ color }) => <FontAwesome name="home" size={22} color={color} style={{ marginBottom: 2 }} />,
         }}
       />
       <Tabs.Screen
         name="refferal"
         options={{
-          title: "Referral",
-          headerShown: false,
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome name="gift" size={size} color={color} />
-          ),
+          title: "Treatments",
+          tabBarIcon: ({ color }) => <FontAwesome name="gift" size={22} color={color} />,
         }}
       />
-      {/* From where this size is coming? */}
       <Tabs.Screen
-        name="bookings"
+        name="gallery"
         options={{
-          title: "Bookings",
-          headerShown: false,
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome name="calendar" size={21} color={color} />
-          ),
+          title: "Gallery",
+          tabBarIcon: ({ color }) => <FontAwesome name="image" size={22} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="membership"
+        options={{
+          title: "Membership",
+          tabBarIcon: ({ color }) => <FontAwesome name="id-card" size={22} color={color} />,
         }}
       />
       <Tabs.Screen
         name="profile"
         options={{
           title: "Profile",
-          headerShown: false,
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome name="user" size={size} color={color} />
-          ),
+          tabBarIcon: ({ color }) => <FontAwesome name="user-circle-o" size={22} color={color} />,
         }}
       />
     </Tabs>
