@@ -1,6 +1,10 @@
 import NoticeBanner from "@/components/Booking/NoticeBanner";
 import CustomCheckbox from "@/components/Common/CustomCheckBox";
 import Spinner from "@/components/Common/Spinner";
+import { treatmentOptions } from "@/constants/treatment-options.constants";
+import { treatments } from "@/constants/treatments.constants";
+import { useAuth } from "@/context/AuthProvider";
+import { createAppointment } from "@/utils/api/appointment";
 import { Ionicons } from "@expo/vector-icons";
 import DateTimePicker from "@react-native-community/datetimepicker";
 import { Picker } from "@react-native-picker/picker";
@@ -8,10 +12,6 @@ import { router } from "expo-router";
 import React, { useState } from "react";
 import { KeyboardAvoidingView, Platform, Pressable, ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
 import Toast from "react-native-toast-message";
-import { treatmentOptions } from "../../constants/treatment-options.constants";
-import { treatments } from "../../constants/treatments.constants";
-import { useAuth } from "../../context/AuthProvider";
-import { createAppointment } from "../../utils/api/appointment";
 
 const Bookings = () => {
   const [loading, setLoading] = useState(false);
