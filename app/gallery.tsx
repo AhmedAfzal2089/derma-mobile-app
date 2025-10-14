@@ -1,5 +1,5 @@
 import { ScrollView } from "react-native";
-import GalleryScreen from "./pages/gallery/GallerySection";
+import GalleryScreen from "./(tabs)/gallery";
 
 export default function Gallery() {
   return (
