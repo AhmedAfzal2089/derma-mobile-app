@@ -3,8 +3,8 @@ import ProfileForm from "@/components/Profile/ProfileForm";
 import SimpleLineIcons from '@expo/vector-icons/SimpleLineIcons';
 import { Pressable, ScrollView, Text, View } from "react-native";
 import Toast from "react-native-toast-message";
-import { auth } from "../config/firebase";
-import { useAuth } from "../context/AuthProvider";
+import { auth } from "../../config/firebase";
+import { useAuth } from "../../context/AuthProvider";
 const Profile = () => {
   const { profile, loading } = useAuth();
 

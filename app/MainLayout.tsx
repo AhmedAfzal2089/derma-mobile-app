@@ -4,7 +4,7 @@ import { Stack, useRouter } from "expo-router";
 import { useEffect } from "react";
 import { ActivityIndicator, View } from "react-native";
 import Toast from "react-native-toast-message";
-import { useAuth } from "./context/AuthProvider";
+import { useAuth } from "../context/AuthProvider";
 
 export default function MainLayout() {
   const { user, loading } = useAuth();

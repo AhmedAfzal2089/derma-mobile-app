@@ -1,32 +1,48 @@
+import CustomSplash from "@/components/Common/CustomSplash";
 import CustomHeader from "@/components/CustomHeader";
-import { Stack, useRouter } from "expo-router";
-import { onAuthStateChanged, User } from "firebase/auth";
+import { SplashScreen, Stack, useRouter } from "expo-router";
+import { User } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { ActivityIndicator, View } from "react-native";
 import Toast from "react-native-toast-message";
-import { auth } from "./config/firebase";
-import { AuthProvider } from "./context/AuthProvider";
+import { AuthProvider } from "../context/AuthProvider";
 import "./global.css";
 
 export default function RootLayout() {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(false);
+  const [appIsReady, setAppIsReady] = useState(false);
   const router = useRouter();
 
+
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
-      setUser(firebaseUser);
-      setLoading(false);
-
-      if (!firebaseUser) {
-        router.replace("/(auth)/login");
-      } else {
-        router.replace("/(tabs)");
+    async function prepare() {
+      try {
+        await new Promise(resolve => setTimeout(resolve, 2000));
+      } finally {
+        setAppIsReady(true);
+        await SplashScreen.hideAsync();
       }
-    });
+    }
 
-    return unsubscribe;
+    prepare();
   }, []);
+
+  // useEffect(() => {
+  //   const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
+  //     setUser(firebaseUser);
+  //     setLoading(false);
+
+  //     // if (!firebaseUser) {
+  //     //   router.replace("/(auth)/login");
+  //     // } else {
+  //     //   router.replace("/(tabs)");
+  //     // }
+  //       router.replace("/(tabs)");
+  //   });
+
+  //   return unsubscribe;
+  // }, []);
 
   if (loading) {
     return (
@@ -34,6 +50,10 @@ export default function RootLayout() {
         <ActivityIndicator size="large" />
       </View>
     );
+  }
+
+  if (!appIsReady) {
+    return <CustomSplash />;
   }
 
   return (

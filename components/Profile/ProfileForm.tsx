@@ -1,8 +1,5 @@
-import { auth } from "@/app/config/firebase";
-import { ENVIRONMENT } from "@/app/constants/environment.constants";
-import { UserProfile } from "@/app/models/user-profile.model";
-import { formatDate } from "@/app/utils/formatDate";
-import { parseDateOrNull } from "@/app/utils/parseDateOrNull";
+import { formatDate } from "@/utils/formatDate";
+import { parseDateOrNull } from "@/utils/parseDateOrNull";
 import { Feather } from "@expo/vector-icons";
 import Entypo from "@expo/vector-icons/Entypo";
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -11,6 +8,9 @@ import DateTimePicker from "@react-native-community/datetimepicker";
 import { useState } from "react";
 import { ActivityIndicator, ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
 import Toast from "react-native-toast-message";
+import { auth } from "../../config/firebase";
+import { ENVIRONMENT } from "../../constants/environment.constants";
+import { UserProfile } from "../../models/user-profile.model";
 
 type Props = {
   profile: UserProfile | null;

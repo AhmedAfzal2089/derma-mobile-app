@@ -3,7 +3,7 @@ import { sendPasswordResetEmail } from "firebase/auth";
 import { useState } from "react";
 import { Pressable, Text, TextInput, View } from "react-native";
 import Toast from "react-native-toast-message";
-import { auth } from "../config/firebase";
+import { auth } from "../../config/firebase";
 
 export default function Forgot() {
   const [email, setEmail] = useState("");

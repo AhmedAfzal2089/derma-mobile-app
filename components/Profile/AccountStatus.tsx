@@ -1,6 +1,6 @@
-import { UserProfile } from "@/app/models/user-profile.model";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import { ScrollView, Text, View } from "react-native";
+import { UserProfile } from "../../models/user-profile.model";
 
 type Props = {
   profile: UserProfile | null;

@@ -1,4 +1,4 @@
-import { ENVIRONMENT } from "@/app/constants/environment.constants";
+import { ENVIRONMENT } from "@/constants/environment.constants";
 
 export const createAppointment = async (payload: any) => {
   try {

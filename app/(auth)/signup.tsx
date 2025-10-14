@@ -4,9 +4,9 @@ import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/
 import { useState } from "react";
 import { Pressable, Text, TextInput, View } from "react-native";
 import Toast from "react-native-toast-message";
-import { auth } from "../config/firebase";
-import { SignupPayload } from "../models/signup-payload.model";
-import { ENVIRONMENT } from "../constants/environment.constants";
+import { auth } from "../../config/firebase";
+import { ENVIRONMENT } from "../../constants/environment.constants";
+import { SignupPayload } from "../../models/signup-payload.model";
 
 export default function Signup() {
   const [fullName, setFullName] = useState("");

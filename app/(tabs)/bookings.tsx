@@ -8,10 +8,10 @@ import { router } from "expo-router";
 import React, { useState } from "react";
 import { KeyboardAvoidingView, Platform, Pressable, ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
 import Toast from "react-native-toast-message";
-import { treatmentOptions } from "../constants/treatment-options.constants";
-import { treatments } from "../constants/treatments.constants";
-import { useAuth } from "../context/AuthProvider";
-import { createAppointment } from "../utils/api/appointment";
+import { treatmentOptions } from "../../constants/treatment-options.constants";
+import { treatments } from "../../constants/treatments.constants";
+import { useAuth } from "../../context/AuthProvider";
+import { createAppointment } from "../../utils/api/appointment";
 
 const Bookings = () => {
   const [loading, setLoading] = useState(false);

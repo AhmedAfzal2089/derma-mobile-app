@@ -6,7 +6,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { router } from "expo-router";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import Toast from "react-native-toast-message";
-import { auth } from "../config/firebase";
+import { auth } from "../../config/firebase";
 
 export default function Login() {
   const [email, setEmail] = useState("");
