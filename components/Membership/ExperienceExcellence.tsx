@@ -26,7 +26,7 @@ export default function ExperienceExcellenceSection() {
       <Image
         // ** PASTE YOUR IMAGE PATH HERE **
         // Example: source={require('../../assets/images/professional-care.jpg')}
-        source={require("../../../../public/images/profAesCare.png")}
+        source={require("../../public/images/profAesCare.png")}
         className="w-full h-64 rounded-lg"
         resizeMode="cover"
       />

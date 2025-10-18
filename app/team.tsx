@@ -1,9 +1,9 @@
 import CoreValuesGrid from "@/components/Common/CoreValuesGrid";
 import { ScrollView } from "react-native";
-import ExpertiseAndPhilosophy from "./pages/Team/ExpertiseAndPhilosphy";
-import TeamHero from "./pages/Team/TeamHero";
-import TeamMemberGrid from "./pages/Team/TeamMemberGrid";
-import CallToAction from "./pages/about/components/CallToAction";
+import CallToAction from "../components/About/CallToAction";
+import ExpertiseAndPhilosophy from "../components/Team/ExpertiseAndPhilosphy";
+import TeamHero from "../components/Team/TeamHero";
+import TeamMemberGrid from "../components/Team/TeamMemberGrid";
 
 export default function TeamScreen() {
   return (

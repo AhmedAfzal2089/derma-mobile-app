@@ -1,7 +1,10 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+import { useAuth } from "@/context/AuthProvider";
 import { FontAwesome } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 
 const _layout = () => {
+  const { user, loading } = useAuth();
   return (
     <Tabs
       screenOptions={{
@@ -58,13 +61,17 @@ const _layout = () => {
           tabBarIcon: ({ color }) => <FontAwesome name="id-card" size={22} color={color} />,
         }}
       />
-      <Tabs.Screen
-        name="profile"
-        options={{
-          title: "Profile",
-          tabBarIcon: ({ color }) => <FontAwesome name="user-circle-o" size={22} color={color} />,
-        }}
-      />
+      {user && (
+        <Tabs.Screen
+          name="(profile)/profile"
+          options={{
+            title: "Profile",
+            tabBarIcon: ({ color }) => (
+              <FontAwesome name="user-circle-o" size={22} color={color} />
+            ),
+          }}
+        />
+      )}    
     </Tabs>
   );
 };

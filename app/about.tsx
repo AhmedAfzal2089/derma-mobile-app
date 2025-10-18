@@ -1,10 +1,10 @@
 // app/about.tsx
 import CoreValuesGrid from "@/components/Common/CoreValuesGrid";
 import { ScrollView } from "react-native";
-import AboutHero from "./pages/about/components/AboutHero";
-import CallToAction from "./pages/about/components/CallToAction";
-import ExpertiseAndPhilosophy from "./pages/about/components/ExpertiseAndPhilosphy";
-import LeadershipBio from "./pages/about/components/LeaderShipBio";
+import AboutHero from "../components/About/AboutHero";
+import CallToAction from "../components/About/CallToAction";
+import ExpertiseAndPhilosophy from "../components/About/ExpertiseAndPhilosphy";
+import LeadershipBio from "../components/About/LeaderShipBio";
 
 export default function AboutScreen() {
   return (

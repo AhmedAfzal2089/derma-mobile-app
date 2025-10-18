@@ -329,3 +329,8 @@ const Bookings = () => {
 };
 
 export default Bookings;
+
+
+export const options = {
+  title: "Back",
+};

@@ -6,7 +6,7 @@ export default function MembershipHero() {
     <View className="bg-white py-16 px-6 items-center">
       {/* Logo */}
       <Image
-        source={require("../../../../public/logo_black.png")} // **Update with your actual logo path**
+        source={require("../../public/logo_black.png")} // **Update with your actual logo path**
         className="w-32 h-16 mb-8"
         resizeMode="contain"
       />

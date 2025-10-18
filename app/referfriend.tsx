@@ -1,9 +1,9 @@
 // app/about.tsx
 import { ScrollView } from "react-native";
-import FAQSection from "./pages/refer-a-friend/FaqsSection";
-import ReferralCards from "./pages/refer-a-friend/ReferalCards";
-import ReferralHero from "./pages/refer-a-friend/ReferralHero";
-import ReferralSteps from "./pages/refer-a-friend/ReferralSteps";
+import FAQSection from "../components/ReferFriend/FaqsSection";
+import ReferralCards from "../components/ReferFriend/ReferalCards";
+import ReferralHero from "../components/ReferFriend/ReferralHero";
+import ReferralSteps from "../components/ReferFriend/ReferralSteps";
 
 export default function AboutScreen() {
   return (

@@ -4,7 +4,7 @@ export default function LeadershipBio() {
   return (
     <View className="bg-white py-12 px-7">
       <Image
-        source={require("../../../../public/images/profImage.png")}
+        source={require("../../public/images/profImage.png")}
         className="w-full h-64 rounded-xl mb-8" // Full width image for mobile, adjust height
         resizeMode="cover"
       />
