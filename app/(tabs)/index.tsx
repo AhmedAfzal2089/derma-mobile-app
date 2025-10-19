@@ -1,5 +1,5 @@
 import ImageCarousel from "@/components/Home/ImageCarousel";
-import TreatmentCarousel from "@/components/Treatments/Carousel/TreatmentCarousel";
+import TreatmentCarousel from "@/components/Treatments/TreatmentCarousel";
 import { ScrollView } from "react-native";
 
 export default function Index() {

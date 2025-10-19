@@ -1,4 +1,4 @@
-import TreatmentsScreen from "@/components/Treatments/Carousel/TreatmentPage";
+import TreatmentsScreen from "@/components/Treatments/TreatmentPage";
 import { View } from "react-native";
 
 const Treatment = () => {
