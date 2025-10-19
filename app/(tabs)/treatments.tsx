@@ -1,9 +1,10 @@
-import { Text, View } from "react-native";
+import TreatmentsScreen from "@/components/Treatments/Carousel/TreatmentPage";
+import { View } from "react-native";
 
 const Treatment = () => {
   return (
     <View className="flex-1 items-center justify-center">
-      <Text className="text-2xl">Treatment Page</Text>
+      <TreatmentsScreen />
     </View>
   );
 };
