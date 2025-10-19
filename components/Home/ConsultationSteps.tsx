@@ -1,4 +1,3 @@
-// components/Home/ConsultationSteps.tsx
 import { Link } from "expo-router";
 import { Text, TouchableOpacity, View } from "react-native";
 
@@ -35,7 +34,7 @@ const StepCard = ({ number, title, description }: any) => (
     </View>
     <Text className="text-gray-400 mb-4">{description}</Text>
     {/* Read more link navigates to treatments page for simplicity */}
-    <Link href="/pages/treatments/treatements" asChild>
+    <Link href="/treatments" asChild>
       <TouchableOpacity>
         <Text className="text-white underline">Read more</Text>
       </TouchableOpacity>

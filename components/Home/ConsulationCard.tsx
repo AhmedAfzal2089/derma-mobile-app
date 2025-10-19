@@ -16,7 +16,7 @@ export default function ConsultationCard() {
           </Text>
 
           {/* Book Consultation Button */}
-          <Link href="/pages/bookings/bookings" asChild>
+          <Link href="/bookings" asChild>
             <TouchableOpacity className="bg-white px-8 py-3 rounded-md mb-6">
               <Text className="text-black text-base font-semibold">
                 BOOK CONSULTATION

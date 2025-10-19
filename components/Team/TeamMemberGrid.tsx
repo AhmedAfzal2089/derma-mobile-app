@@ -70,7 +70,7 @@ export default function TeamMemberGrid() {
             <Text className="text-lg font-bold text-zinc-800">{member.name}</Text>
             <Text className="text-gray-600 text-sm mb-4">{member.role}</Text>
 
-            <Link href="/pages/bookings/bookings" asChild>
+            <Link href="/bookings" asChild>
               <TouchableOpacity className="w-full px-4 py-3 border border-zinc-300 rounded-md bg-zinc-950 items-center">
                 <Text className="text-white font-semibold text-sm">BOOK CONSULTATION</Text>
               </TouchableOpacity>

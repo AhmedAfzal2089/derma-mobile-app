@@ -7,8 +7,8 @@ export default function TeamHero() {
     <View className="bg-white py-16 px-6 items-center">
       {/* Logo */}
       <Image
-        source={require("../../../public/logo_black.png")} // **Update with your actual logo path**
-        className="w-32 h-16 mb-8" // Adjust width/height as needed for your logo
+        source={require("../../public/logo_black.png")}
+        className="w-32 h-16 mb-8"
         resizeMode="contain"
       />
 

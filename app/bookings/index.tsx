@@ -331,6 +331,8 @@ const Bookings = () => {
 export default Bookings;
 
 
-export const options = {
-  title: "Back",
-};
+
+// export const options = {
+//   headerTitle: "Book a Consultation", 
+//   title: "Bookings", 
+// };

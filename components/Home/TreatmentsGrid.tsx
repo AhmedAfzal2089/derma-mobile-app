@@ -39,7 +39,7 @@ const TreatmentCard = ({ title, icon, description }: any) => (
         <Text className="text-white font-semibold text-lg ml-2">{title}</Text>
       </View>
       <Text className="text-gray-400 text-sm mb-2">{description}</Text>
-      <Link href="/pages/treatments/treatements" asChild>
+      <Link href="/treatments" asChild>
         <TouchableOpacity>
           <Text className="text-white text-sm">Learn more</Text>
         </TouchableOpacity>
@@ -64,7 +64,7 @@ export default function TreatmentsGrid() {
 
       {/* View All Treatments Button */}
       <View className="items-center mt-6">
-        <Link href="/pages/treatments/treatements" asChild>
+        <Link href="/treatments" asChild>
           <TouchableOpacity className="px-6 py-4 border border-zinc-500 rounded-full bg-zinc-900">
             <Text className="text-white ">View All Treatments</Text>
           </TouchableOpacity>

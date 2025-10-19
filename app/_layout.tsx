@@ -1,8 +1,7 @@
 import CustomSplash from "@/components/Common/CustomSplash";
-import CustomHeader from "@/components/CustomHeader";
 import { SplashScreen, Stack, useRouter } from "expo-router";
 import { User } from "firebase/auth";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ActivityIndicator, View } from "react-native";
 import Toast from "react-native-toast-message";
 import { AuthProvider } from "../context/AuthProvider";
@@ -14,11 +13,10 @@ export default function RootLayout() {
   const [appIsReady, setAppIsReady] = useState(false);
   const router = useRouter();
 
-
   useEffect(() => {
     async function prepare() {
       try {
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, 2000));
       } finally {
         setAppIsReady(true);
         await SplashScreen.hideAsync();
@@ -58,21 +56,27 @@ export default function RootLayout() {
 
   return (
     <AuthProvider>
-      <View className="flex-1">
-        <Stack>
-          <Stack.Screen name="(tabs)" options={{ header: () => <CustomHeader /> }} />
-          <Stack.Screen name="cart" options={{ header: () => <CustomHeader /> }} />
-          <Stack.Screen name="about" options={{ header: () => <CustomHeader /> }} />
-          <Stack.Screen name="membership" options={{ header: () => <CustomHeader /> }} />
-          <Stack.Screen name="contact" options={{ header: () => <CustomHeader /> }} />
-          <Stack.Screen name="team" options={{ header: () => <CustomHeader /> }} />
-          <Stack.Screen name="(blogs)" options={{ header: () => <CustomHeader /> }} />
-          <Stack.Screen name="referfriend" options={{ header: () => <CustomHeader /> }} />
-          <Stack.Screen name="gallery" options={{ header: () => <CustomHeader /> }} />
+      {/* <View className="flex-1"> */}
+        <Stack
+          screenOptions={{
+            headerStyle: { backgroundColor: "#6a51ae" },
+            headerTintColor: "#fff",
+            headerTitleStyle: { fontWeight: "bold" },
+          }}
+        >
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen name="cart" options={{ headerShown: false }} />
+          <Stack.Screen name="about" options={{ headerShown: false }} />
+          <Stack.Screen name="membership" options={{ headerShown: false }} />
+          <Stack.Screen name="contact" options={{ headerShown: false }} />
+          <Stack.Screen name="team" options={{ headerShown: false }} />
+          <Stack.Screen name="(blogs)" options={{ headerShown: false }} />
+          <Stack.Screen name="referfriend" options={{ headerShown: false }} />
+          <Stack.Screen name="gallery" options={{ headerShown: false }} />
           <Stack.Screen name="(auth)" options={{ headerShown: false }} />
         </Stack>
         <Toast />
-      </View>
+      {/* </View> */}
     </AuthProvider>
   );
 }

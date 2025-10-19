@@ -3,6 +3,7 @@ import ConsultationSteps from "@/components/Home/ConsultationSteps";
 import ExpertCard from "@/components/Home/ExpertCard";
 import HomePageGalleryPreview from "@/components/Home/GallerySection";
 import HeroSection from "@/components/Home/HeroSection";
+import ImageCarousel from "@/components/Home/ImageCarousel";
 import MembershipCard from "@/components/Home/MembershipCard";
 import RecentBlogs from "@/components/Home/RecentBlogs";
 import ReferralSection from "@/components/Home/RefferalSection";
@@ -13,6 +14,7 @@ import { ScrollView } from "react-native";
 export default function Index() {
   return (
     <ScrollView className="flex-1">
+      <ImageCarousel />
       <HeroSection />
       <ConsultationCard />
       <ExpertCard />

@@ -16,7 +16,7 @@ const HeroSection = () => {
         {/* Call-to-Action Buttons */}
         <View className="flex-col gap-6 mt-6">
           {/* Treatments Button */}
-          <Link href="/pages/treatments/treatements" asChild>
+          <Link href="/treatments" asChild>
             <TouchableOpacity className="px-6 py-3 bg-white border rounded-md">
               <Text className="text-black text-base font-semibold">
                 Our Treatments
@@ -25,7 +25,7 @@ const HeroSection = () => {
           </Link>
 
           {/* Products Button */}
-          <Link href="/pages/treatments/treatements" asChild>
+          <Link href="/treatments" asChild>
             <TouchableOpacity className="px-6 py-3 bg-white border rounded-md">
               <Text className="text-black text-base font-semibold">
                 Our Products

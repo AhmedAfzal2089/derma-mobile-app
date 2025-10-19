@@ -17,7 +17,7 @@ export default function CallToAction() {
       </Text>
 
       {/* "Book a Consultation" Button */}
-      <Link href="/pages/bookings/bookings" asChild>
+      <Link href="/bookings" asChild>
         <TouchableOpacity className="px-8 py-4 bg-white rounded-md shadow-lg">
           <Text className="text-zinc-900 font-semibold text-base">
             BOOK A CONSULTATION

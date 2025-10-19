@@ -8,6 +8,16 @@
     "scheme": "dermamobilelatest",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "androidNavigationBar": {
+      "visible": true,
+      "backgroundColor": "#ffffff", 
+      "barStyle": "dark-content"
+    },
+    "androidStatusBar": {
+      "translucent": false,
+      "backgroundColor": "#ffffff",
+      "barStyle": "dark-content"
+    },
     "ios": {
       "supportsTablet": true
     },
