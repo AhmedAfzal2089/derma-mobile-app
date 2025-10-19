@@ -1,21 +1,13 @@
-import ConsultationCard from "@/components/Home/ConsulationCard";
-import ConsultationSteps from "@/components/Home/ConsultationSteps";
-import ExpertCard from "@/components/Home/ExpertCard";
-import HomePageGalleryPreview from "@/components/Home/GallerySection";
-import HeroSection from "@/components/Home/HeroSection";
 import ImageCarousel from "@/components/Home/ImageCarousel";
-import MembershipCard from "@/components/Home/MembershipCard";
-import RecentBlogs from "@/components/Home/RecentBlogs";
-import ReferralSection from "@/components/Home/RefferalSection";
-import ReviewsCarousel from "@/components/Home/ReviewCarousel";
-import TreatmentsGrid from "@/components/Home/TreatmentsGrid";
+import TreatmentCarousel from "@/components/Treatments/Carousel/TreatmentCarousel";
 import { ScrollView } from "react-native";
 
 export default function Index() {
   return (
-    <ScrollView className="flex-1">
+    <ScrollView className="flex-1 gap-20">
       <ImageCarousel />
-      <HeroSection />
+      <TreatmentCarousel />
+      {/* <HeroSection />
       <ConsultationCard />
       <ExpertCard />
       <TreatmentsGrid />
@@ -24,7 +16,7 @@ export default function Index() {
       <HomePageGalleryPreview />
       <ReferralSection />
       <MembershipCard />
-      <RecentBlogs />
+      <RecentBlogs /> */}
     </ScrollView>
   );
 }

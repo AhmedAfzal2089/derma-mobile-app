@@ -42,10 +42,10 @@ const _layout = () => {
           }}
         />
         <Tabs.Screen
-          name="refferal"
+          name="treatments"
           options={{
             title: "Treatments",
-            tabBarIcon: ({ color }) => <FontAwesome name="gift" size={22} color={color} />,
+            tabBarIcon: ({ color }) => <FontAwesome name="hospital-o" size={22} color={color} />,
           }}
         />
         <Tabs.Screen
