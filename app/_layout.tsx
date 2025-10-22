@@ -1,4 +1,5 @@
 import CustomSplash from "@/components/Common/CustomSplash";
+import { WithStripeProvider } from "@/components/Stripe/WithStripeProvider";
 import { SplashScreen, Stack, useRouter } from "expo-router";
 import { User } from "firebase/auth";
 import React, { useEffect, useState } from "react";
@@ -42,6 +43,7 @@ export default function RootLayout() {
   //   return unsubscribe;
   // }, []);
 
+
   if (loading) {
     return (
       <View className="flex-1 justify-center items-center">
@@ -55,8 +57,9 @@ export default function RootLayout() {
   }
 
   return (
-    <AuthProvider>
-      {/* <View className="flex-1"> */}
+    <WithStripeProvider>
+      <AuthProvider>
+        {/* <View className="flex-1"> */}
         <Stack
           screenOptions={{
             headerStyle: { backgroundColor: "#6a51ae" },
@@ -76,7 +79,8 @@ export default function RootLayout() {
           <Stack.Screen name="(auth)" options={{ headerShown: false }} />
         </Stack>
         <Toast />
-      {/* </View> */}
-    </AuthProvider>
+        {/* </View> */}
+      </AuthProvider>
+    </WithStripeProvider>
   );
 }

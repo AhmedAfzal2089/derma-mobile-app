@@ -1,74 +1,63 @@
-// components/Membership/MembershipTiers.tsx
+import { STRIPE_CONFIG } from "@/constants/stripe-config.constants";
+import { tiers } from "@/constants/tiers.constants";
+import { createPaymentIntent } from "@/utils/api/createPaymentIntent";
+import { updatePlanStatus } from "@/utils/api/updatePlanStatus";
 import { Feather } from "@expo/vector-icons";
-import { Text, TouchableOpacity, View } from "react-native";
+import { useStripe } from "@stripe/stripe-react-native";
+import { useState } from "react";
+import { Alert, Text, TouchableOpacity, View } from "react-native";
 
-// Data for each membership tier
-const tiers = [
-  {
-    name: "Veritas Glow",
-    subtitle: "ENTRY TIER",
-    price: "£80",
-    billing: "Billed monthly",
-    isPopular: false,
-    benefits: [
-      "1x ProFusion Hydrafacial monthly",
-      "3x RF Microneedling area (first 3 sessions)",
-      "1x PRP Hair Face (alternate months)",
-      "10% off injectables & skincare",
-      "Priority booking access",
-    ],
-    buttonText: "SELECT GLOW TIER",
-    buttonColor: "bg-white",
-  },
-  {
-    name: "Veritas Sculpt",
-    subtitle: "MID TIER",
-    price: "£160",
-    billing: "Billed monthly",
-    isPopular: true,
-    benefits: [
-      "3x Prolific treatments (includes top-up)",
-      "1x Anti-Wrinkle Treatment (3 areas every 3 months)",
-      "1x Laser Hair Removal (any area)",
-      "1x RF Microneedling or PRP Facial",
-      "15% off injectables & fillers",
-      "Quarterly facial icons",
-      "VIP event invitations",
-    ],
-    buttonText: "SELECT SCULPT TIER",
-    buttonColor: "bg-blue-600",
-  },
-  {
-    name: "Veritas Prestige",
-    subtitle: "LUXURY TIER",
-    price: "£299",
-    billing: "Billed monthly",
-    isPopular: false,
-    benefits: [
-      "Endolift (discounted annually)",
-      "3x CO2 Laser sessions",
-      "Quarterly Exosome therapy",
-      "20% off Fillers & Anti-Wrinkle Treatment",
-      "RF Microneedling included",
-      "Complete hair care treatments",
-      "Monthly product gifts",
-      "Annual skin health report",
-    ],
-    buttonText: "SELECT PRESTIGE TIER",
-    buttonColor: "bg-white",
-  },
-];
+const USER_ID = "vB2UxgEP1oZTEDVskDun4X2bcdE3";
 
 export default function MembershipTiers() {
+  const { initPaymentSheet, presentPaymentSheet } = useStripe();
+  const [loading, setLoading] = useState(false);
+
+  const handleSubscribe = async (planName: string) => {
+    try {
+      setLoading(true);
+
+      const { clientSecret } = await createPaymentIntent({
+        planName,
+        userId: USER_ID,
+      });
+
+      const init = await initPaymentSheet({
+        merchantDisplayName: STRIPE_CONFIG.MERCHANT_NAME,
+        paymentIntentClientSecret: clientSecret,
+        allowsDelayedPaymentMethods: true,
+      });
+
+      if (init.error) {
+        Alert.alert("Error", init.error.message);
+        return;
+      }
+
+      const paymentResult = await presentPaymentSheet();
+
+      if (paymentResult.error) {
+        Alert.alert("Payment Failed", paymentResult.error.message);
+      } else {
+        await updatePlanStatus({
+          userId: USER_ID,
+          planName,
+          paymentStatus: "succeeded",
+        });
+        Alert.alert("Success", `Payment successful for ${planName}!`);
+      }
+    } catch (error: any) {
+      Alert.alert("Error", error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <View className="bg-white py-12 px-6">
       {/* Section Header */}
-      <Text className="text-3xl font-bold text-center text-zinc-800 mb-2">
-        Choose Your Membership Tier
-      </Text>
+      <Text className="text-3xl font-bold text-center text-zinc-800 mb-2">Choose Your Membership Tier</Text>
       <Text className="text-gray-600 text-center text-base mb-8">
-        Select the membership level that best fits your aesthetic goals and
-        lifestyle.
+        Select the membership level that best fits your aesthetic goals and lifestyle.
       </Text>
 
       {/* Membership Cards Container */}
@@ -84,9 +73,7 @@ export default function MembershipTiers() {
             {/* "Most Popular" Banner */}
             {tier.isPopular && (
               <View className="absolute top-0 right-0 px-4 py-1 rounded-bl-xl bg-white">
-                <Text className="text-xs font-bold text-blue-600">
-                  MOST POPULAR
-                </Text>
+                <Text className="text-xs font-bold text-blue-600">MOST POPULAR</Text>
               </View>
             )}
 
@@ -119,12 +106,7 @@ export default function MembershipTiers() {
             <View className="mb-8">
               {tier.benefits.map((benefit, i) => (
                 <View key={i} className="flex-row items-start mb-2">
-                  <Feather
-                    name="check"
-                    size={16}
-                    color={tier.isPopular ? "white" : "white"}
-                    className="mr-2 mt-1"
-                  />
+                  <Feather name="check" size={16} color={tier.isPopular ? "white" : "white"} className="mr-2 mt-1" />
                   <Text className="text-gray-300 ml-2 flex-1">{benefit}</Text>
                 </View>
               ))}
@@ -133,10 +115,11 @@ export default function MembershipTiers() {
             {/* Select Tier Button */}
             <TouchableOpacity
               className={`
-                w-full px-6 py-4  rounded-md items-center
-                ${tier.buttonColor}
-                ${tier.isPopular ? "border-2 border-white" : ""}
-              `}
+    w-full px-6 py-4 rounded-md items-center
+    ${loading ? "bg-green-500 text-white" : tier.buttonColor}
+    ${tier.isPopular ? "border-2 border-white" : ""}
+  `}
+              onPress={() => handleSubscribe(tier.name)}
             >
               <Text
                 className={`
@@ -144,7 +127,7 @@ export default function MembershipTiers() {
                 ${tier.isPopular ? "text-white" : "text-black"}
               `}
               >
-                {tier.buttonText}
+                {loading ? "Processing..." : tier.buttonText}
               </Text>
             </TouchableOpacity>
           </View>

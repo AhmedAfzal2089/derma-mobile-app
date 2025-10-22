@@ -23,7 +23,7 @@
     },
     "splash": {
       "image": "./assets/images/icon.png",
-      "resizeMode": "contrain",
+      "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "android": {
