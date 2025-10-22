@@ -1,10 +1,10 @@
 import { View } from "react-native";
-import PolynucleotideTreatmentScreen from "../treatments/polynucleotide";
+import HairRevitalizingTreatmentScreen from "../treatments/hair-revitalizing";
 
 const Treatment = () => {
   return (
     <View className="flex-1 items-center justify-center">
-      <PolynucleotideTreatmentScreen />
+      <HairRevitalizingTreatmentScreen />
     </View>
   );
 };
