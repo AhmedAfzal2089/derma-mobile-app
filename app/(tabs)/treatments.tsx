@@ -1,10 +1,10 @@
 import { View } from "react-native";
-import ExosomeTherapyScreen from "../treatments/exosome-therapy";
+import PolynucleotideTreatmentScreen from "../treatments/polynucleotide";
 
 const Treatment = () => {
   return (
     <View className="flex-1 items-center justify-center">
-      <ExosomeTherapyScreen />
+      <PolynucleotideTreatmentScreen />
     </View>
   );
 };
